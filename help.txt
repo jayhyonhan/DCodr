@@ -1,0 +1,9 @@
+If you need help, just look at this text file
+
+Every script saves the output to ./outputs
+
+python binary_to_number.py <binary>
+python binary_to_text.py <binary>
+python caesar_cipher.py <allowed characters (e.g. ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz)> <text> (wil brute force)
+python circular_bitshift <output type (either "text", "binary", or "number")> <binary>
+python number_to_text.py <number>

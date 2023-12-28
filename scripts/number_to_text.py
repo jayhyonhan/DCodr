@@ -1,6 +1,6 @@
 from sys import argv
 from create_output import create_output
-def num_to_text(input_string,do_return):
+def num_to_text(input_string):
     output_string = ""
     temp = ""
     for i in temp:
@@ -8,10 +8,11 @@ def num_to_text(input_string,do_return):
             print("Not a denary(base 10) number. Exiting...")
             exit()
     for i in range(len(input_string.split(" "))):
-        output_string += str(chr(int(input_string.split(" ")[i])))
-    if do_return:
-        return output_string
-    create_output(output_string, "num-to-text")
+        try:
+            output_string += str(chr(int(input_string.split(" ")[i])))
+        except:
+            continue
+    return output_string
   
 
 if __name__ == '__main__':
@@ -20,4 +21,4 @@ if __name__ == '__main__':
         input += argv[i]
         if i != (len(argv)-1):
             input += " "
-    num_to_text(input, False)
+    create_output(num_to_text(input), "num-to-text")

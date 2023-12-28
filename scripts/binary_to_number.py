@@ -1,6 +1,6 @@
 from sys import argv
 from create_output import create_output
-def binary_to_num(input_string, do_return):
+def binary_to_num(input_string: str):
     output_string = ""
     temp = ""
     for i in temp:
@@ -11,9 +11,7 @@ def binary_to_num(input_string, do_return):
         output_string += str(int(input_string.split(" ")[i], base=2))
         if i != len(input_string.split(" "))-1:
             output_string += " "
-    if do_return:
-        return output_string
-    create_output(output_string, "binary-to-num")
+    return output_string
   
 
 if __name__ == '__main__':
@@ -22,4 +20,4 @@ if __name__ == '__main__':
         input += argv[i]
         if i != (len(argv)-1):
             input += " "
-    binary_to_num(input, False)
+    create_output(binary_to_num(input), "binary-to-num")
